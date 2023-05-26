@@ -1,4 +1,4 @@
-package com.example.importjavascenery.exception;
+package com.example.importjavascenery;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
