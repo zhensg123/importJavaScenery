@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 
 //@RestController注解相当于@ResponseBody ＋ @Controller合在一起的作用。
 @RestController
@@ -18,8 +20,8 @@ public class GetMysqlDataController {
     private UserService userService;
 
     @RequestMapping("/mysql")
-    public Object mysql(Integer id){
-        User User = userService.findById((long)id);
-        return Result.success(User);
+    public Object mysql(){
+        List list = userService.findAll();
+        return Result.success(list);
     }
 }
